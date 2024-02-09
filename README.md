@@ -14,3 +14,7 @@ npm i --save-dev typescript ts-loader
 ```bash
 npm i --save-dev typescript ts-node @types/node @types/webpack
 ```
+Установить webpack-dev-server для автоматической сборки при изменении:
+```bash
+npm i --save-dev webpack-dev-server @types/webpack-dev-server
+```

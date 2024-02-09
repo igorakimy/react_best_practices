@@ -3,10 +3,15 @@ import {buildLoaders} from "./buildLoaders";
 import {buildResolvers} from "./buildResolvers";
 import {Configuration} from "webpack";
 import {BuildOptions} from "./types/config";
+import {buildDevServer} from "./buildDevServer";
 
 export function buildWebpackConfig(options: BuildOptions): Configuration {
 
-    const {mode, paths} = options;
+    const {
+        mode,
+        paths,
+        isDev
+    } = options;
 
     return {
         // Режим сборки
@@ -35,5 +40,12 @@ export function buildWebpackConfig(options: BuildOptions): Configuration {
 
         // Конфигурация резолверов
         resolve: buildResolvers(),
+
+        // Генерация исходной карты скриптовых файлов, собранных в один
+        // для удобства отладки в dev режиме
+        devtool: isDev ? 'inline-source-map' : undefined,
+
+        // Конфигурация сервера для разработки
+        devServer: isDev ? buildDevServer(options) : undefined,
     }
 }
