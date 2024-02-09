@@ -18,3 +18,15 @@ npm i --save-dev typescript ts-node @types/node @types/webpack
 ```bash
 npm i --save-dev webpack-dev-server @types/webpack-dev-server
 ```
+Установить react зависимости:
+```bash
+npm i react react-dom
+```
+Установить типы для react зависимостей: 
+```bash
+npm i -D @types/react @types/react-dom
+```
+Установить зависимости для поддержки sass препроцессора: 
+```bas
+npm i --save-dev sass-loader sass webpack style-loader css-loader
+```
