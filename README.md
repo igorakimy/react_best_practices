@@ -27,6 +27,10 @@ npm i react react-dom
 npm i -D @types/react @types/react-dom
 ```
 Установить зависимости для поддержки sass препроцессора: 
-```bas
+```bash
 npm i --save-dev sass-loader sass webpack style-loader css-loader
+```
+Установить плагин, который создает отдельный css файл для каждого js файла:
+```bash
+npm i --save-dev mini-css-extract-plugin
 ```

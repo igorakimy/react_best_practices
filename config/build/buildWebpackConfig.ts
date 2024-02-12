@@ -35,7 +35,7 @@ export function buildWebpackConfig(options: BuildOptions): Configuration {
 
         module: {
             // Конфигурация загрузчиков
-            rules: buildLoaders(),
+            rules: buildLoaders(options),
         },
 
         // Конфигурация резолверов
