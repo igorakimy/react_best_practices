@@ -34,3 +34,11 @@ npm i --save-dev sass-loader sass webpack style-loader css-loader
 ```bash
 npm i --save-dev mini-css-extract-plugin
 ```
+Установить пакет для маршрутизации:
+```bash
+npm i react-router-dom
+```
+Установить типы для пакета для маршрутизации:
+```bash
+npm i -D @types/react-router-dom
+```
