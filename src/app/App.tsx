@@ -1,11 +1,11 @@
-import React, {Suspense, useContext, useState} from 'react';
+import React, {Suspense} from 'react';
 import {Link, Route, Routes} from 'react-router-dom';
 // Импортируем файл со стилями
 import './styles/index.scss';
-import {AboutPageLazy} from "./pages/AboutPage/AboutPage.lazy";
-import {MainPageLazy} from "./pages/MainPage/MainPage.lazy";
-import {useTheme} from "./theme/useTheme";
-import {classNames} from "./helpers/classNames/classNames";
+import {useTheme} from "app/providers/ThemeProvider";
+import {classNames} from "shared/lib/classNames/classNames";
+import {MainPage} from "pages/MainPage";
+import {AboutPage} from "pages/AboutPage";
 
 const App = () => {
     // Использование кастомного хука
@@ -19,8 +19,8 @@ const App = () => {
 
             <Suspense fallback={<div>Loading...</div>}>
                 <Routes>
-                    <Route path={'/about'} element={<AboutPageLazy/>}/>
-                    <Route path={'/'} element={<MainPageLazy/>}/>
+                    <Route path={'/about'} element={<AboutPage/>}/>
+                    <Route path={'/'} element={<MainPage/>}/>
                 </Routes>
             </Suspense>
         </div>

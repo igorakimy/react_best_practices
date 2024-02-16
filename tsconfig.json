@@ -8,6 +8,11 @@
     "noImplicitAny": true,
     // Для абсолютного импорта
     "baseUrl": ".",
+    // Указать, откуда будут происходить все абсолютные импорты
+    "paths": {
+      "*": ["./src/*"]
+    },
+    // Указать код какого модуля будет сгенерирован
     "module": "ESNext",
     // В какую спецификацию компилируем для поддержки большинства браузеров
     "target": "ES5",
@@ -23,7 +28,7 @@
     // загрузчики вроде ts-loader или babel-loader автоматически создают их
     // вместо такого импорта: import * as React from 'react';
     // можно писать такой: import React from 'react';
-    "allowSyntheticDefaultImports": true,
+    "allowSyntheticDefaultImports": true
   },
   "ts-node": {
     "compilerOptions": {

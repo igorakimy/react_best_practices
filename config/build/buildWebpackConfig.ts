@@ -39,7 +39,7 @@ export function buildWebpackConfig(options: BuildOptions): Configuration {
         },
 
         // Конфигурация резолверов
-        resolve: buildResolvers(),
+        resolve: buildResolvers(options),
 
         // Генерация исходной карты скриптовых файлов, собранных в один
         // для удобства отладки в dev режиме

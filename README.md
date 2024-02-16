@@ -42,3 +42,5 @@ npm i react-router-dom
 ```bash
 npm i -D @types/react-router-dom
 ```
+
+**Архитектура:** [feature-sliced](https://feature-sliced.design/)
