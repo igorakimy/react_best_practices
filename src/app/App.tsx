@@ -5,6 +5,7 @@ import './styles/index.scss';
 import {useTheme} from "app/providers/ThemeProvider";
 import {classNames} from "shared/lib/classNames/classNames";
 import {AppRouter} from "app/providers/router";
+import {Navbar} from "widgets/Navbar";
 
 const App = () => {
     // Использование кастомного хука
@@ -12,10 +13,8 @@ const App = () => {
 
     return (
         <div className={classNames('app', {}, [theme])}>
+            <Navbar />
             <button onClick={toggleTheme}>Сменить тему</button>
-            <Link to={'/'}>Главная</Link>
-            <Link to={'/about'}>О сайте</Link>
-
             <AppRouter />
         </div>
     );
